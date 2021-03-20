@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/main.min.css">
+
+  <title>Tennis Love</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Расписание</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Результаты</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Рейтинг</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">О лиге</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <img class="header__image" src="images/user-image.jpg" alt="Фотография пользователя">
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="logo logo--signup">
+        <img class="logo__image" src="images/logo.png" alt="Логотип">
+        <h1 class="logo__title">
+          Детская теннисная лига <br> I Love Tennis
+        </h1>
+      </div>
+
+      <section class="signup">
+        <div class="signup__inner">
+          <h2 class="signup__title">Регистрация</h2>
+
+          <form class="signup__form" action="#">
+            <div class="signup__user">
+              <h3 class="signup__user-title">Представитель</h3>
+              <div class="signup__user-form">
+                <div class="signup__user-item">
+                  <input class="signup__user-input" type="text" id="input1" placeholder="Анна Валентиновна">
+                  <label class="signup__user-label" for="input1">Имя представителя</label>
+                </div>
+
+                <div class="signup__user-item">
+                  <input class="signup__user-input" type="tel" id="input2" placeholder="+7 999 000 00 00">
+                  <label class="signup__user-label" for="input2">Телефон</label>
+                </div>
+
+                <div class="signup__user-item">
+                  <input class="signup__user-input" type="email" id="input3" placeholder="mail@mail.ru">
+                  <label class="signup__user-label" for="input3">E-mail</label>
+                </div>
+
+                <div class="signup__user-item">
+                  <input class="signup__user-input" type="password" id="input4" placeholder="••••••••••••••••••••••">
+                  <label class="signup__user-label" for="input4">Пароль</label>
+                </div>
+
+                <div class="signup__user-item">
+                  <input class="signup__user-input" type="password" id="input5" placeholder="••••••••••••••••••••••">
+                  <label class="signup__user-label" for="input5">Повторите пароль</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="signup__member">
+              <h3 class="signup__member-title">Игрок</h3>
+
+              <div class="signup__member-form">
+                <div class="signup__member-box">
+                  <label class="signup__member-upload">
+                    <span>Загрузить фото</span>
+                    <input class="signup__member-file" type="file">
+                  </label>
+                </div>
+
+                <div class="signup__member-inputs">
+                  <div class="signup__member-item">
+                    <input class="signup__member-input" type="text" id="input6" placeholder="Костя Демьянов">
+                    <label class="signup__member-label" for="input6">Имя игрока</label>
+                  </div>
+
+                  <div class="signup__member-item">
+                    <input class="signup__member-input" type="text" id="input7" placeholder="03.02.1994">
+                    <label class="signup__member-label" for="input7">Дата рождения</label>
+                  </div>
+                  <div class="signup__member-select select">
+                    <div class="signup__member-header select__header">
+                      <img class="signup__member-currentball select__currentball" src="images/balls/red.svg"
+                        alt="Фото мяча">
+                      <span class="signup__member-current select__current">Красный мяч</span>
+                      <img class="signup__member-arrow" src="images/arrow.svg">
+                    </div>
+
+                    <ul class="signup__member-list select__list">
+                      <li class="signup__member-li select__li">
+                        <img class="signup__member-ball select__ball" src="images/balls/red.svg" alt="Фото мяча">
+                        <span class="signup__member-item select__item">Красный мяч</span>
+                      </li>
+
+                      <li class="signup__member-li select__li">
+                        <img class="signup__member-ball select__ball" src="images/balls/orange.svg" alt="Фото мяча">
+                        <span class="signup__member-item select__item">Оранжевый мяч</span>
+                      </li>
+
+                      <li class="signup__member-li select__li">
+                        <img class="signup__member-ball select__ball" src="images/balls/yellow.svg" alt="Фото мяча">
+                        <span class="signup__member-item select__item">Жёлтый мяч</span>
+                      </li>
+
+                      <li class="signup__member-li select__li">
+                        <img class="signup__member-ball select__ball" src="images/balls/green.svg" alt="Фото мяча">
+                        <span class="signup__member-item select__item">Зелёный мяч</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="signup__more" type="button">Ещё игрок</button>
+            <button class="signup__button" type="submit">Зарегистрироваться</button>
+          </form>
+
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/selectball.js"></script>
+</body>
+
+</html>
