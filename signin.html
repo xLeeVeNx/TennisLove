@@ -35,7 +35,7 @@
           </li>
         </ul>
 
-        <button class="header__button" type="button">Вход</button>
+        <button class="header__button popup-openBtn" type="button" data-popup="popup-in">Вход</button>
       </nav>
     </header>
 
@@ -477,31 +477,31 @@
             <div class="rating__top">
               <h2 class="rating__title title">Рейтинг</h2>
 
-              <div class="rating__select">
-                <div class="rating__select-header">
-                  <img class="rating__select-currentball" src="images/balls/red.svg" alt="Фото мяча">
-                  <span class="rating__select-current">Красный мяч</span>
+              <div class="rating__select select">
+                <div class="rating__select-header select__header">
+                  <img class="rating__select-currentball select__currentball" src="images/balls/red.svg" alt="Фото мяча">
+                  <span class="rating__select-current select__current">Красный мяч</span>
                 </div>
 
-                <ul class="rating__select-list">
-                  <li class="rating__select-li" data-color="#DB5542">
-                    <img class="rating__select-ball" src="images/balls/red.svg" alt="Фото мяча">
-                    <span class="rating__select-item">Красный мяч</span>
+                <ul class="rating__select-list select__list">
+                  <li class="rating__select-li select__li" data-color="#DB5542">
+                    <img class="rating__select-ball select__ball" src="images/balls/red.svg" alt="Фото мяча">
+                    <span class="rating__select-item select__item">Красный мяч</span>
                   </li>
 
-                  <li class="rating__select-li" data-color="#FF7A00">
-                    <img class="rating__select-ball" src="images/balls/orange.svg" alt="Фото мяча">
-                    <span class="rating__select-item">Оранжевый мяч</span>
+                  <li class="rating__select-li select__li" data-color="#FF7A00">
+                    <img class="rating__select-ball select__ball" src="images/balls/orange.svg" alt="Фото мяча">
+                    <span class="rating__select-item select__item">Оранжевый мяч</span>
                   </li>
 
-                  <li class="rating__select-li" data-color="#FFC700">
-                    <img class="rating__select-ball" src="images/balls/yellow.svg" alt="Фото мяча">
-                    <span class="rating__select-item">Жёлтый мяч</span>
+                  <li class="rating__select-li select__li" data-color="#FFC700">
+                    <img class="rating__select-ball select__ball" src="images/balls/yellow.svg" alt="Фото мяча">
+                    <span class="rating__select-item select__item">Жёлтый мяч</span>
                   </li>
 
-                  <li class="rating__select-li" data-color="#08A61A">
-                    <img class="rating__select-ball" src="images/balls/green.svg" alt="Фото мяча">
-                    <span class="rating__select-item">Зелёный мяч</span>
+                  <li class="rating__select-li select__li" data-color="#08A61A">
+                    <img class="rating__select-ball select__ball" src="images/balls/green.svg" alt="Фото мяча">
+                    <span class="rating__select-item select__item">Зелёный мяч</span>
                   </li>
                 </ul>
               </div>
@@ -672,9 +672,77 @@
           <img class="contact__map" src="images/map.jpg" alt="Карта">
         </div>
       </section>
+
+      <div class="popup-in popup">
+        <div class="popup__inner">
+          <h3 class="popup__title">Вход</h3>
+
+          <button class="popup__close-btn popup-closeBtn" type="button">
+            <img class="popup__close-img" src="images/close.svg" alt="Иконка крестика">
+          </button>
+
+          <div class="popup-in__item">
+            <input class="popup-in__input popup__input" type="text" placeholder="Логин или e-mail">
+            <span class="popup-in__error" for="input03">Неправильный логин или пароль</span>
+          </div>
+
+          <div class="popup-in__item">
+            <input class="popup-in__input popup__input" type="password" placeholder="••••••••••••••••••••••">
+            <span class="popup-in__error" for="input04">Неправильный логин или пароль</span>
+          </div>
+
+          <div class="popup-in__box">
+            <label class="popup-in__label">
+              <div class="popup-in__label-box">
+                <input class="popup-in__checkbox-hidden" type="checkbox">
+                <span class="popup-in__checkbox"></span>
+              </div>
+              <span class="popup__text">Запомнить меня</span>
+            </label>
+
+            <a class="popup__text popup__text--color popup-openBtn" href="#" data-popup="popup-reset">Забыли пароль?</a>
+          </div>
+
+          <button class="popup__button" type="submit">Войти</button>
+
+          <a class="popup__text popup__text--color" href="signup.html">Регистрация игрока</a>
+        </div>
+      </div>
+
+      <div class="popup-reset popup">
+        <div class="popup__inner">
+          <h3 class="popup-reset__title popup__title">Сброс пароля</h3>
+
+          <button class="popup__close-btn popup-closeBtn" type="button">
+            <img class="popup__close-img" src="images/close.svg" alt="Иконка крестика">
+          </button>
+
+          <p class="popup-reset__text popup__text">
+            Чтобы сбросить пароль, введите e-mail или логин, с помощью которого вы входите в свой аккаунт.
+          </p>
+
+          <form class="popup-reset__form" action="#">
+            <input class="popup-reset__input popup__input" type="text" placeholder="Логин или e-mail">
+
+            <button class="popup-reset__button popup__button popup-openBtn" type="submit" data-popup="popup-true">Сбросить пароль</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup-true popup">
+        <div class="popup-true__inner popup__inner">
+          <img class="popup-true__image" src="images/success.svg" alt="Галочка">
+
+          <p class="popup-true__text popup__text">
+            Сообщение с дальнейшими инструкциями отправлено на ваш e-mail
+          </p>
+
+          <button class="popup-true__button popup-closeBtn" type="button">Понятно</button>
+        </div>
+      </div>
     </main>
   </div>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
